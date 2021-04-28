@@ -3,7 +3,7 @@
 #ENTRYPOINT ["nginx","-g", "daemon off;"]
 FROM node:10 AS builder
 WORKDIR /app
-COPY ..
+COPY . .
 RUN npm i && npm run build
 
 FROM nginx:alpine
