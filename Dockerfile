@@ -9,5 +9,5 @@ RUN npm i && npm run build
 FROM nginx:alpine
 WORKDIR /usr/share/nginx/html
 RUN rm -rf ./*
-COPY --from=builder /app/dist/angular-nginx-docker .
+COPY --from=builder /app/dist/hello-world .
 ENTRYPOINT ["nginx","-g","daemon off;"]
